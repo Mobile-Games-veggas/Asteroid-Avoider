@@ -2,8 +2,11 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public void Crash()
-    {
-        gameObject.SetActive(false);
-    }
+	[SerializeField] private GameOverHandler gameOverHandler;
+	public void Crash()
+	{
+		gameOverHandler.EndGame();
+		
+		gameObject.SetActive(false);
+	}
 }

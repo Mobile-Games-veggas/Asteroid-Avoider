@@ -15,14 +15,14 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 movementDirection;
 
-    void Start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody>();
 
         mainCamera = Camera.main;
     }
 
-    void Update()
+    private void Update()
     {
         ProcessInput();
 
