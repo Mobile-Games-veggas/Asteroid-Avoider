@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -20,6 +21,11 @@ public class ScoreSystem : MonoBehaviour
 		scoreText.text = Mathf.FloorToInt(score).ToString();
 	}
 	
+	public void StartTimer()
+	{
+		shoudCount = true;
+	}
+	
 	public int EndTimer()
 	{
 		shoudCount = false;
@@ -28,4 +34,5 @@ public class ScoreSystem : MonoBehaviour
 		
 		return Mathf.FloorToInt(score);
 	}
+
 }
